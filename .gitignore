@@ -3,3 +3,4 @@ web
 __pycache__
 settings.py
 .vscode
+config.py
