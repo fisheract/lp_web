@@ -5,3 +5,4 @@ settings.py
 .vscode
 config.py
 env/
+*.db
