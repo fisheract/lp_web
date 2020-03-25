@@ -6,4 +6,4 @@ settings.py
 config.py
 env/
 *.db
-webapp2/config.py
+webapp/config.py
