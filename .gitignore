@@ -3,8 +3,7 @@ web
 __pycache__
 settings.py
 .vscode
-config.py
 env/
 *.db
-webapp/config.py
 venv
+webapp/localconfig.py

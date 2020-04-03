@@ -4,7 +4,7 @@ import requests
 def weather_by_city(city):
     weather_url = current_app.config['WEATHER_URL']
     params = {
-        'key':current_app.config['API_KEY'],
+        'key':current_app.config['WEATHER_API_KEY'],
         'q':city,
         'format':'json',
         "num_of_days":1,
