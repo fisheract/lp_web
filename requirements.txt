@@ -1,53 +1,33 @@
-<<<<<<< HEAD
-astroid==2.3.3
-bcrypt==3.1.7
-beautifulsoup4==4.8.2
-certifi==2019.11.28
-cffi==1.14.0
-=======
 astroid==2.4.2
+bcrypt==3.1.7
 beautifulsoup4==4.9.1
 certifi==2020.4.5.2
->>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
+cffi==1.14.0
 chardet==3.0.4
 click==7.1.2
 colorama==0.4.3
 cryptography==2.9.2
 entrypoints==0.3
-<<<<<<< HEAD
 fabric2==2.5.0
-flake8==3.7.9
-Flask==1.1.1
-=======
 flake8==3.8.3
 Flask==1.1.2
->>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
 Flask-Login==0.5.0
 Flask-SQLAlchemy==2.4.3
 Flask-WTF==0.14.3
 idna==2.9
-<<<<<<< HEAD
-invoke==1.4.1
-=======
 importlib-metadata==1.6.1
->>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
+invoke==1.4.1
 isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-<<<<<<< HEAD
 paramiko==2.7.1
-pycodestyle==2.5.0
-pycparser==2.20
-pyflakes==2.1.1
-pylint==2.4.4
-=======
 pycodestyle==2.6.0
+pycparser==2.20
 pyflakes==2.2.0
 pylint==2.5.3
->>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
 pylint-flask==0.6
 pylint-plugin-utils==0.6
 PyNaCl==1.4.0
