@@ -24,20 +24,21 @@
                     </div>
                     {% endif %}
                 {% endwith %}
-                <h2>News</h2>
+                <h1>News</h1>
                 {% for news in news_list %}
-                <p><a href='{{news.url}}'>{{news.title}}</a></p>
-                <p>{{ news.published.strftime("%Y-%m-%d") }}</p>
+                <h3><a href='{{news.url}}'>{{news.title}}</a></h3>
+                <h3>{{ news.published.strftime("%d.%m.%Y") }}</h3>
                 <hr />
                 {% endfor %}
             </div>
             <div class="col-4">
-                <h2>Weather</h2>
+                <h1>Weather</h1>
+                <h3>
                 {% if weather %}
                     Temperature is {{ weather.temp_C }}, feels like {{ weather.FeelsLikeC }}
                 {% else %}
                     Service is unavailable
-                {% endif %}
+                {% endif %}</h3>
             </div>
         </div>
     </div>
