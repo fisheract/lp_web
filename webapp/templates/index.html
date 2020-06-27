@@ -26,8 +26,13 @@
                 {% endwith %}
                 <h1>News</h1>
                 {% for news in news_list %}
+<<<<<<< HEAD
                 <h3><a href='{{news.url}}'>{{news.title}}</a></h3>
                 <h3>{{ news.published.strftime("%d.%m.%Y") }}</h3>
+=======
+                <p><a href='{{news.url}}'>{{news.title}}</a></p>
+                <p>{{ news.published.strftime("%d.%m.%Y") }}</p>
+>>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
                 <hr />
                 {% endfor %}
             </div>

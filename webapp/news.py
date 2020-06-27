@@ -26,7 +26,11 @@ def get_python_news():
             url = news.find('a')['href']
             published = news.find('time').text
             try:
+<<<<<<< HEAD
                 published = datetime.strptime(published, "%B %d,%Y")
+=======
+                published = datetime.strptime(published, "%B %d, %Y")
+>>>>>>> 95cd575fecb7da49756cacfa75e77250b7cab8e6
             except(ValueError):
                 published = datetime.now()
             save_news_todb(title, url, published)
