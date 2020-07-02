@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-8">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {% for message in messages %}
+                        {{ message }}<br>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <h1>News</h1>
+                {% for news in news_list %}
+                <p><a href='{{news.url}}'>{{news.title}}</a></p>
+                <p>{{ news.published.strftime("%d.%m.%Y") }}</p>
+                <hr />
+                {% endfor %}
+            </div>
+            <div class="col-4">
+                <h1>Weather</h1>
+                <h3>
+                {% if weather %}
+                    Temperature is {{ weather.temp_C }}, feels like {{ weather.FeelsLikeC }}
+                {% else %}
+                    Service is unavailable
+                {% endif %}</h3>
+            </div>
+        </div>
+{% endblock %}
