@@ -14,8 +14,8 @@
                 {% endwith %}
                 <h1>News</h1>
                 {% for news in news_list %}
-                <p><a href='{{news.url}}'>{{news.title}}</a></p>
-                <p>{{ news.published.strftime("%d.%m.%Y") }}</p>
+                <h3><a href='{{ url_for('news.single_news', news_id=news.id) }}'>{{news.title}}</a></h3>
+                <p>{{ news.published.strftime("%d.%m.%Y в %H:%M") }}</p>
                 <hr />
                 {% endfor %}
             </div>

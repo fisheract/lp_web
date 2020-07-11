@@ -1,0 +1,5 @@
+.news-content img, h1 {
+    max-width: 100%;
+    height: auto;
+    font-size: 30px
+}
