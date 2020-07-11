@@ -1,5 +1,5 @@
 from flask import Blueprint, flash, redirect, render_template, url_for
-from flask_login import current_user, login_required, login_user, logout_user
+from flask_login import current_user, login_user, logout_user
 
 from webapp.db import db
 from webapp.user.forms import LoginForm, RegistrationForm
@@ -15,7 +15,8 @@ def login():
         return redirect(url_for('news.index'))
     title = 'Authorization'
     login_form = LoginForm()
-    return render_template('user/login.html', page_title=title, form=login_form)
+    return render_template('user/login.html', page_title=title,
+                           form=login_form)
 
 
 @blueprint.route('/process-login', methods=['Post'])
@@ -44,18 +45,25 @@ def register():
         return redirect(url_for('news.index'))
     title = 'Registration'
     login_form = RegistrationForm()
-    return render_template('user/registration.html', page_title=title, form=login_form)
+    return render_template('user/registration.html', page_title=title,
+                           form=login_form)
 
 
 @blueprint.route('/process-reg', methods=['Post'])
 def process_reg():
     form = RegistrationForm()
     if form.validate_on_submit():
-        news_user = User(username=form.username.data, email=form.email.data, role='user')
+        news_user = User(username=form.username.data, email=form.email.data,
+                         role='user')
         news_user.set_password(form.password.data)
         db.session.add(news_user)
         db.session.commit()
         flash('You successfully registrated')
         return redirect(url_for('user.login'))
-    flash('Please input proper registration data')
-    return redirect(url_for('user.register'))
+    else:
+        for field, errors in form.errors.items():
+            for error in errors:
+                flash('Error in field {}: {}'.format(
+                    getattr(form, field).label.text, error
+                ))
+        return redirect(url_for('user.register'))
